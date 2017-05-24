@@ -16,26 +16,26 @@
   transition: no-transition;
 }
 
-div.transition-screen[transition="open"] {
+div.transition-screen[data-transition="open"] {
   transform: scale(1, 1);
 }
 
-div.transition-screen[transition="top"] {
+div.transition-screen[data-transition="top"] {
   transform-origin: center top;
   transform: scale(1, 0);
 }
 
-div.transition-screen[transition="bottom"] {
+div.transition-screen[data-transition="bottom"] {
   transform-origin: center bottom;
   transform: scale(1, 0);
 }
 
-div.transition-screen[transition="right"] {
+div.transition-screen[data-transition="right"] {
   transform-origin: right center;
   transform: scale(0, 1);
 }
 
-div.transition-screen[transition="left"] {
+div.transition-screen[data-transition="left"] {
   transform-origin: left center;
   transform: scale(0, 1);
 }

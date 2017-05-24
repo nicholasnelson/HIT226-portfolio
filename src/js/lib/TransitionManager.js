@@ -30,6 +30,8 @@ class TransitionManager {
     
     // Default to first screen
     this._currentActive = document.querySelector('div.transition-screen');
+    this._currentActive.setAttribute("data-transition-url", "./");
+    this.moveTo(this._currentActive, "down");
     
     this._scanLinks(document);
     
@@ -38,12 +40,12 @@ class TransitionManager {
   
   _scanLinks(targetDiv) {
     // First load any required links into the document
-    var transitionLinks = targetDiv.querySelectorAll("[transition-direction]");
+    var transitionLinks = targetDiv.querySelectorAll("[data-transition-direction]");
 
     for (var el of transitionLinks) {
       var url = el.getAttribute("href");
       // Check for existing target div for this url
-      var transitionScreen = document.querySelector('div.transition-screen[transition-url="' + url + '"]');
+      var transitionScreen = document.querySelector('div.transition-screen[data-transition-url="' + url + '"]');
 
       // If we didn't find a target, create one
       if(!transitionScreen) {
@@ -53,7 +55,7 @@ class TransitionManager {
         // Create element for the screen
         transitionScreen = document.createElement("div");
         transitionScreen.classList.add("transition-screen");
-        transitionScreen.setAttribute("transition-url", url);
+        transitionScreen.setAttribute("data-transition-url", url);
         document.body.appendChild(transitionScreen);
         
         // Request the page, callback loads the page into the transitionScreen div
@@ -75,7 +77,7 @@ class TransitionManager {
       el.onclick = this.moveTo
           .bind(this,
               transitionScreen,
-              el.getAttribute('transition-direction'));
+              el.getAttribute('data-transition-direction'));
     }
     
   }
@@ -106,15 +108,15 @@ class TransitionManager {
     }
     // Put newActive in correct position without using transition effects
     newActive.classList.add("no-transition");
-    newActive.setAttribute("transition", fromSide);
+    newActive.setAttribute("data-transition", fromSide);
     /* Force reflow before we remove no-transition
      * Thanks to Mark Amery on Stackoverflow for this answer */
     newActive.offsetHeight; // Reflow voodoo here
     newActive.classList.remove("no-transition");
     // Start closing currentActive
-    this._currentActive.setAttribute("transition", toSide);
+    this._currentActive.setAttribute("data-transition", toSide);
     // Start opening newActive, with transition effect
-    newActive.setAttribute("transition", "open");
+    newActive.setAttribute("data-transition", "open");
     
     this._currentActive = newActive;
   

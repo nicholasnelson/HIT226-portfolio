@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
 <head>
   <title>nicknelson.io</title>
   <meta charset="utf-8">
-  <link href="https://fonts.googleapis.com/css?family=Karla|Space+Mono:400,400i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Karla%7CSpace+Mono:400,400i" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="./css/main.css">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,25 +12,25 @@
 <body>
   <div class="topnav">
     <div class="topnavupper">
-      <a href="./" transition-direction="up">
+      <a href="./" data-transition-direction="up">
         <span><img src="./images/chevron-top.svg" class="img-glyph" alt="Up arrow"></span><span>Home</span><span><img src="./images/chevron-top.svg" class="img-glyph" alt="Up arrow"></span>
       </a>
     </div>
     <div class="topnavlower">
-      <a class="leftnav-mobile" transition-direction="left" href="./portfolio.html"><img src="./images/chevron-left.svg" class="img-glyph" alt="Left arrow">Portfolio</a>
-      <a class="rightnav-mobile" transition-direction="right" href="./contact.html">Contact<img src="./images/chevron-right.svg" class="img-glyph" alt="Right arrow"></a>
+      <a class="leftnav-mobile" data-transition-direction="left" href="./portfolio.html"><img src="./images/chevron-left.svg" class="img-glyph" alt="Left arrow">Portfolio</a>
+      <a class="rightnav-mobile" data-transition-direction="right" href="./contact.html">Contact<img src="./images/chevron-right.svg" class="img-glyph" alt="Right arrow"></a>
     </div>
   </div>
   <div class="main">
-    <span class="leftnav-desktop">
-      <a href="./portfolio.html" transition-direction="left"><img src="./images/chevron-left.svg" class="img-glyph" alt="Left arrow">Portfolio</a>
-    </span>
+    <div class="leftnav-desktop">
+      <a href="./portfolio.html" data-transition-direction="left"><img src="./images/chevron-left.svg" class="img-glyph" alt="Left arrow">Portfolio</a>
+    </div>
     <div class="showcase">
       <h1>Education & Experience</h1>
       <div class="cardcontainer">
         <div class="card">
           <div class="cardheading">
-            <h2>Customer Service Representative, Technical Support<h2>
+            <h2>Customer Service Representative, Technical Support</h2>
             <h4>Internode (Jan 2016 - present)</h4>
           </div>
           <div class="cardcontent">
@@ -44,7 +44,7 @@
         </div>
         <div class="card">
           <div class="cardheading">
-            <h2>Bachelor of Information Technology<h2>
+            <h2>Bachelor of Information Technology</h2>
             <h4>Charles Darwin University (In Progress)</h4>
           </div>
           <div class="cardcontent">
@@ -61,7 +61,7 @@
         </div>
         <div class="card">
           <div class="cardheading">
-            <h2>CISCO CCENT<h2>
+            <h2>CISCO CCENT</h2>
             <h4>Independant (In Progress)</h4>
           </div>
           <div class="cardcontent">
@@ -70,9 +70,9 @@
         </div>
       </div>
     </div>
-    <span class="rightnav-desktop">
-      <a href="./contact.html" transition-direction="right">Contact & Links<img src="./images/chevron-right.svg" class="img-glyph" alt="Right arrow"></a>
-    </span>
+    <div class="rightnav-desktop">
+      <a href="./contact.html" data-transition-direction="right">Contact & Links<img src="./images/chevron-right.svg" class="img-glyph" alt="Right arrow"></a>
+    </div>
   </div>
 </body>
 </html>
