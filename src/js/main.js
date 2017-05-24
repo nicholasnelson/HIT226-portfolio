@@ -6,12 +6,11 @@
 */
 
 import TransitionManager from "./lib/TransitionManager";
+import EmailHide from "./lib/EmailHide";
 
 var transitionManager = new TransitionManager();
 
-/*
-try {
-    transitionManager.moveTo(0, 1);
-} catch (e) {
-    console.error(e);
-}*/
+var emailHide = new EmailHide();
+setInterval(function() {
+    emailHide.unhide("email@nicknelson.io", "Hello");
+}, 1000);

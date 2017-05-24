@@ -47,8 +47,6 @@ class TransitionManager {
 
       // If we didn't find a target, create one
       if(!transitionScreen) {
-        console.log("Didn't find a matching transitionScreen, loading from url " + url);
-        
         var req = new XMLHttpRequest();
         var method = "GET";
         
@@ -62,7 +60,6 @@ class TransitionManager {
         req.open(method, url, true);
         req.onreadystatechange = function (req, target) {
             if(req.readyState === XMLHttpRequest.DONE && req.status === 200) {
-              console.log(req.responseURL);
               var doc = document.implementation.createHTMLDocument(req.responseURL);
               doc.documentElement.innerHTML = req.responseText;
               target.innerHTML = doc.body.innerHTML;
@@ -107,7 +104,6 @@ class TransitionManager {
       default:
         throw new Error("Invalid direction: " + animateDirection);
     }
-    console.log(newActive);
     // Put newActive in correct position without using transition effects
     newActive.classList.add("no-transition");
     newActive.setAttribute("transition", fromSide);

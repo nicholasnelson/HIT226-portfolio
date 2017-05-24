@@ -31,7 +31,6 @@ class EmailHide {
   unhide(email, subject) {
     var emailTextFields = document.querySelectorAll(".emailhide-text");
     var emailHrefs = document.querySelectorAll(".emailhide-href");
-    console.log(emailTextFields);
     for (var el of emailTextFields) {
       el.innerHTML = email;
     }
