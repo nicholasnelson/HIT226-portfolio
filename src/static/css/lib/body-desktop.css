@@ -1,0 +1,23 @@
+.showcase {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.topnavlower {
+  display: none;
+}
+
+.leftnav-desktop, .rightnav-desktop {
+  display: inline;
+  padding: 20px;
+  white-space: nowrap;
+}
+
+.frontpage-link-break {
+  display: inline;
+}
+
+.frontpage-link {
+  display: inline;
+  text-align: center;
+}

@@ -1,0 +1,41 @@
+/* CSS for page transition effect */
+
+.transition-screen {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  transition: 0.25s ease-in-out;
+}
+
+.transition-screen {
+  height: 100%;
+  transform: scale(0);
+}
+
+.no-transition {
+  transition: no-transition;
+}
+
+div.transition-screen[transition="open"] {
+  transform: scale(1, 1);
+}
+
+div.transition-screen[transition="top"] {
+  transform-origin: center top;
+  transform: scale(1, 0);
+}
+
+div.transition-screen[transition="bottom"] {
+  transform-origin: center bottom;
+  transform: scale(1, 0);
+}
+
+div.transition-screen[transition="right"] {
+  transform-origin: right center;
+  transform: scale(0, 1);
+}
+
+div.transition-screen[transition="left"] {
+  transform-origin: left center;
+  transform: scale(0, 1);
+}

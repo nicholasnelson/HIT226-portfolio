@@ -1,0 +1,50 @@
+/* temp: font-family: 'Space Mono', monospace;
+font-family: 'Karla', sans-serif; */
+
+/* Colors:
+https://coolors.co/dbe6e3-2b2426-93918d-1d4b50-236466
+  #DBE6E3, #2B2426, #93918D, #1D4B50, #236466
+*/
+
+html {
+  background-color: #F4F9F8;
+  color: #2B2426;
+  font-family: 'Karla', sans-serif;
+}
+
+
+/* General styling of all headers */
+h1,
+h2,
+h3 {
+  font-family: 'Space Mono', monospace;
+  color: #1D4B50;
+}
+
+h4,
+h5,
+h6 {
+  font-family: 'Space Mono', monospace;
+  font-style: italic;
+}
+
+/* Styling of links */
+
+a {
+  font-family: 'Space Mono', monospace;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+a:link,
+a:visited {
+  color: #1D4B50;
+}
+
+a:active {
+  color: #236466;
+}
+
+ul {
+  list-style-type: circle;
+}
